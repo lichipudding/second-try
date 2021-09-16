@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform enemy;
-
+    private GameObject levelLoader;
     private Vector2 movement;
     public float moveSpeed;
 
@@ -14,9 +14,9 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        //  rb = this.GetComponent < Rigidbody2D > ();
-    }
 
+    
+    }
     void Update()
     {
         Vector3 direction = enemy.position - transform.position;
@@ -50,6 +50,8 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+        levelLoader.GetComponent<LevelLoader>().enemyKillCount += 1;
         Destroy(gameObject);
     }
 }

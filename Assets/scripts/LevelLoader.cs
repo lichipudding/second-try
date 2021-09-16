@@ -23,6 +23,8 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(enemyKillCount);
+
         if (enemyKillCount >= killQuota)
         {
             killQuotaMet = true;
