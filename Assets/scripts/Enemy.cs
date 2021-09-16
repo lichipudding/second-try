@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
 
     public int health = 100;
-
-    //public GameObject death;
+    public Rigidbody2D rb;
+    public GameObject death;
    
     public void takeDamage (int damage)
     {
@@ -26,14 +26,15 @@ public class Enemy : MonoBehaviour
    
     void Start()
     {
-      //  rb = this.GetComponent < Rigidbody2D > ();
+        enemy = this.GetComponent<Transform>();
+     rb = this.GetComponent < Rigidbody2D > ();
     }
 
     void Update()
     {
         Vector3 direction = enemy.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-       // rb.rotation = angle;
+        rb.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour
 
     void moveCharacter(Vector2 direction)
     {
-       // rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
     void Die()

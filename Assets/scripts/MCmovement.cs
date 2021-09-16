@@ -8,9 +8,16 @@ public class MCmovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Camera cam;
+    public GameObject player;
 
     Vector2 movement;
     Vector2 mPos;
+
+    private void Start()
+    {
+        GetComponent<GameObject>();
+    }
+
 
     void Update()
     {

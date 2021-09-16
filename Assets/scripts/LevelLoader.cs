@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-
-    int enemyCount;
-    bool killQuotaMet;
+    [HideInInspector]
+    public int enemyKillCount;
+    public int killQuota = 10;
+    bool killQuotaMet = false;
     public Animator transition;
     public float transitionTime = 1f;
 
     void Start()
     {
-        
+        killQuotaMet = false; 
     }
 
 
@@ -22,7 +23,20 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (enemyKillCount >= killQuota)
+        {
+            killQuotaMet = true;
+        }
+
+      //  else { killQuotaMet = false; }
+
+        if (killQuotaMet == true)
+        {
+            LoadNextLevel();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+
         {
             LoadNextLevel();
         }
