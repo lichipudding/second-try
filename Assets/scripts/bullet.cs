@@ -13,23 +13,18 @@ public class bullet : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
     }
-    private void OnCollisionEnter2D(Collision2D collision) //destroy bullet on collision
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-          {
-              Destroy(gameObject);
-        }
-    }
+   
 
-    private void OnCollisionEnter2D(Collider2D hitInfo) // bullet damages enemy
+    void OnTriggerEnter2D(Collider2D hitInfo) // bullet damages enemy
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.takeDamage(damage);
+            enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
+       
 
-        Destroy(gameObject);
     }
 
 }

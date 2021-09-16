@@ -11,29 +11,17 @@ public class Enemy : MonoBehaviour
 
     public int health = 100;
 
-    //public GameObject death;
-   
-    public void takeDamage (int damage)
-    {
-        health -= damage; 
 
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-   
     void Start()
     {
-      //  rb = this.GetComponent < Rigidbody2D > ();
+        //  rb = this.GetComponent < Rigidbody2D > ();
     }
 
     void Update()
     {
         Vector3 direction = enemy.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-       // rb.rotation = angle;
+        // rb.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
@@ -45,12 +33,23 @@ public class Enemy : MonoBehaviour
 
     void moveCharacter(Vector2 direction)
     {
-       // rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        // rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
-    void Die()
-    {
+    //public GameObject death;
 
+    public void TakeDamage (int damage)
+    {
+        health -= damage; 
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die ()
+    {
         Destroy(gameObject);
     }
 }
