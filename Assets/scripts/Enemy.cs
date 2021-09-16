@@ -46,12 +46,11 @@ public class Enemy : MonoBehaviour
 
     void moveCharacter(Vector2 direction)
     {
-    rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
     void Die()
     {
-
         Destroy(gameObject);
     }
 }
