@@ -8,50 +8,38 @@ public class Enemy : MonoBehaviour
     private GameObject levelLoader;
     private Vector2 movement;
     public float moveSpeed;
-
     public int health = 100;
 
 
     void Start()
     {
-
     
     }
     void Update()
     {
         Vector3 direction = enemy.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        // rb.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
 
-    private void FixedUpdate()
-    {
-        moveCharacter(movement);
-    }
-
-    void moveCharacter(Vector2 direction)
-    {
-        // rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
-    }
-
-    //public GameObject death;
 
     public void TakeDamage(int damage)
     {
         health -= damage;
 
-        if (health <= 0)
-        {
-            Die();
-        }
+           if (health <= 0)
+           {
+                StartCoroutine(DieSlow()); // Coroutine can be paused for a slower death
+           }
     }
 
-    void Die()
+    IEnumerator DieSlow()
     {
-        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-        levelLoader.GetComponent<LevelLoader>().enemyKillCount += 1;
+        yield return new WaitForSeconds(0.2f); //waits 0,2 secs
         Destroy(gameObject);
+        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader"); 
+        levelLoader.GetComponent<LevelLoader>().gameScore += 100; // adds score
     }
+     
 }

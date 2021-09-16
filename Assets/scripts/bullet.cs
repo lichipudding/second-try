@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public int damage = 50; //how much damage the bullet is doing
+    public int damage = 51; //how much damage the bullet is doing
     public Rigidbody2D rb;
 
 
