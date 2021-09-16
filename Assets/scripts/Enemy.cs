@@ -5,20 +5,22 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform player;
-    private Rigidbody2D rb;
+    private Rigidbody2D thisRigidbody;
     private Vector2 movement;
     public float moveSpeed;
 
     void Start()
     {
-        rb = this.GetComponent < Rigidbody2D > ();
+        thisRigidbody = this.GetComponent < Rigidbody2D > ();
+        player = 
+
     }
 
     void Update()
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        thisRigidbody.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
@@ -30,7 +32,7 @@ public class Enemy : MonoBehaviour
 
     void moveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        thisRigidbody.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
 }

@@ -14,10 +14,13 @@ public class MCmovement : MonoBehaviour
 
     void Update()
     {
+        movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("speed", Mathf.Abs(movement.y));
 
         mPos = cam.ScreenToWorldPoint(Input.mousePosition);
+               movement = movement.normalized;
+
     }
 
     private void FixedUpdate()
