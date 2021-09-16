@@ -8,6 +8,7 @@ TagManager:
   - GameBorder
   - PlayerCharacter
   - LevelLoader
+  - Bullet
   layers:
   - Default
   - TransparentFX

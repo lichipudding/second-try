@@ -30,13 +30,13 @@ public class Enemy : MonoBehaviour
 
            if (health <= 0)
            {
-                StartCoroutine(DieSlow()); // Coroutine can be paused for a slower death
+                StartCoroutine(DieSlow()); // Coroutine used to delay DieSlow()
            }
     }
 
     IEnumerator DieSlow()
     {
-        yield return new WaitForSeconds(0.2f); //waits 0,2 secs
+        yield return new WaitForSeconds(0.2f); // waits on this line for 0.2 sec
         Destroy(gameObject);
         levelLoader = GameObject.FindGameObjectWithTag("LevelLoader"); 
         levelLoader.GetComponent<LevelLoader>().gameScore += 100; // adds score
