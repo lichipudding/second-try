@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   rb: {fileID: 0}
+  bulletRicochet: 0.1

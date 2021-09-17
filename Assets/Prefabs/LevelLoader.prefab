@@ -252,5 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed18bfd88b198e0439dc748bb7fe4cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScore: 0
+  scoreQuota: 1000
   transition: {fileID: 6790000225942791246}
   transitionTime: 1
