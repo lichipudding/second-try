@@ -31,5 +31,17 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void LoadCurrentLevel() 
+    {
+        StartCoroutine(LoadCurrentLevel(SceneManager.GetActiveScene().buildIndex));
+
+    }
+
+    IEnumerator LoadCurrentLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(levelIndex);
+    }
 
 }

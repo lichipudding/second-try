@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public int gameScore;
+    private int savedGameScore;
     bool scoreQuotaMet = false;
+    bool playerIsDead = false;
     public int scoreQuota;
   
     void Start()
@@ -39,14 +41,34 @@ public class GameManager : MonoBehaviour
         if (scoreQuotaMet == true)
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-            levelLoader.GetComponent<LevelLoader>().LoadNextLevel(); 
+            levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
+            savedGameScore = gameScore;  // Saves gamescore when loading next level
+            Debug.Log("saving gamescore, saved score is" + savedGameScore);
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
+            savedGameScore = gameScore;  // Saves gamescore when loading next level
+            Debug.Log("saving gamescore, saved score is" + savedGameScore);
         }
+
+        else if (playerIsDead == true)
+        {
+            levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+            levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
+            gameScore = savedGameScore;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+            levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
+            gameScore = savedGameScore;
+            Debug.Log("Saved gamescore is " + savedGameScore);
+        }
+
     }
 
     private void OnEnable()
