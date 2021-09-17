@@ -11,18 +11,6 @@ public class Enemy : MonoBehaviour
     public int health = 100;
 
 
-    void Start()
-    {
-    
-    }
-    void Update()
-    {
-        Vector3 direction = enemy.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        direction.Normalize();
-        movement = direction;
-    }
-
 
     public void TakeDamage(int damage)
     {
