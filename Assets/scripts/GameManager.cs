@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public int gameScore;
     private int savedGameScore;
     bool scoreQuotaMet = false;
-    bool playerIsDead = false;
+    [HideInInspector]
+    public bool playerIsDead = false;
     public int scoreQuota;
   
     void Start()
@@ -54,11 +55,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("saving gamescore, saved score is" + savedGameScore);
         }
 
-        else if (playerIsDead == true)
+        if (playerIsDead == true)
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
             gameScore = savedGameScore;
+            playerIsDead = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2))
