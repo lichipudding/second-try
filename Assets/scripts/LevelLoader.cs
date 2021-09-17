@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public int levelQuota = 1000;
+    public int levelQuota = 250;
     public Animator transition;
     public float transitionTime = 1f;
 

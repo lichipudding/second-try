@@ -9,9 +9,17 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
     public float moveSpeed;
     public int health = 100;
+    private int scoreAdd = 50;
+    private Controller ScoreController; 
 
 
 
+    private void Start()
+    {
+        ScoreController = GameObject.FindGameObjectWithTag("ScoreController").GetComponent<Controller>();
+       
+        
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -26,8 +34,9 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f); // waits on this line for 0.2 sec
         Destroy(gameObject);
+        ScoreController.AddScore(scoreAdd); 
         gameManager = GameObject.FindGameObjectWithTag("GameManager"); 
-        gameManager.GetComponent<GameManager>().gameScore += 100; // adds score
+        gameManager.GetComponent<GameManager>().gameScore += scoreAdd; // adds score
     }
      
 }
