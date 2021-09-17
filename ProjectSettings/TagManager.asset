@@ -9,6 +9,7 @@ TagManager:
   - PlayerCharacter
   - LevelLoader
   - Bullet
+  - GameManager
   layers:
   - Default
   - TransparentFX

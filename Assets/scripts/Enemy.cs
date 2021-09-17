@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform enemy;
-    private GameObject levelLoader;
+    private GameObject gameManager;
     private Vector2 movement;
     public float moveSpeed;
     public int health = 100;
@@ -38,8 +38,8 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f); // waits on this line for 0.2 sec
         Destroy(gameObject);
-        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader"); 
-        levelLoader.GetComponent<LevelLoader>().gameScore += 100; // adds score
+        gameManager = GameObject.FindGameObjectWithTag("GameManager"); 
+        gameManager.GetComponent<GameManager>().gameScore += 100; // adds score
     }
      
 }

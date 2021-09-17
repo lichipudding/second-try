@@ -23,7 +23,7 @@ public class bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             IEnumerator bulletKiller() // Quick function to delay the bullets death
             {
-                yield return new WaitForSeconds(bulletRicochet); // bullet delay
+                yield return new WaitForSeconds(bulletRicochet); // Bullet delay
                 Destroy(gameObject);
             }
             StartCoroutine(bulletKiller());

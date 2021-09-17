@@ -5,38 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    [HideInInspector]
-    public int gameScore;
-    public int scoreQuota = 1000;
-    bool scoreQuotaMet = false;
+    public int levelQuota = 1000;
     public Animator transition;
     public float transitionTime = 1f;
 
     void Start()
     {
-        scoreQuotaMet = false; 
+        Debug.Log(levelQuota);
     }
 
     void Update()
     {
-        Debug.Log(gameScore);
-
-        if (gameScore >= scoreQuota)
-        {
-            scoreQuotaMet = true;
-        }
-
-      //  else { scoreQuotaMet = false; }
-
-        if (scoreQuotaMet == true)
-        {
-            LoadNextLevel();
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            LoadNextLevel();
-        }
+       
     }
 
     public void LoadNextLevel()
