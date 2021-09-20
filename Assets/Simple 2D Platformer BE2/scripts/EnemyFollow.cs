@@ -7,7 +7,7 @@ public class EnemyFollow : MonoBehaviour
     private GameObject gameManager;
     private IEnumerator enemy;
     private bool isPlayerDead;
-    private Transform player;
+    private Transform target;
     private Rigidbody2D rb;
     private Vector2 movement;
     public float moveSpeed = 1f;
@@ -15,19 +15,19 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("PlayerCharacter").transform;
+        target = GameObject.FindGameObjectWithTag("HomeHitbox").transform;
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         isPlayerDead = gameManager.GetComponent<GameManager>().playerIsDead;
     }
 
     void Update()
     {
-        if (player == null) // Kills all following enemies if player dies
+        if (target == null) // pauses all enemies if player dies
         {
             return;
         }
 
-        Vector3 direction = player.position - transform.position;
+        Vector3 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();

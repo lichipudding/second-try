@@ -18,7 +18,7 @@ public class PlayerDeath : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")) // Kill the player if it touches an enemy
+        if (other.gameObject.CompareTag("Enemy")) // Kill the player if enemy touches object with this script
         {
             StartCoroutine(DieSlow()); // Coroutine used to delay DieSlow()
         }

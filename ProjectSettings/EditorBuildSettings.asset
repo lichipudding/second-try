@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ErikStart.unity
     guid: 5bcbff638280af34094bc3ff5eb49dc2
   - enabled: 1
-    path: Assets/Scenes/Erik2.unity
-    guid: 09c2b373b7a65e9489f8c3b15eec4638
+    path: Assets/Scenes/ErikStart 2.unity
+    guid: 9eb02e88a7fc809468e198b07c47d461
   - enabled: 1
-    path: Assets/Scenes/Erik3.unity
-    guid: 2cacf525e4e7d474992e05a6c9ba8422
+    path: Assets/Scenes/ErikStart 3.unity
+    guid: 06f3e573058f43f45a5d9cf31301d7fc
   m_configObjects: {}
