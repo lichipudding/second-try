@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private GameObject levelLoader;
 
     [HideInInspector]
+    private GameObject ScoreController;
     public int gameScore;
     private int savedGameScore;
     bool scoreQuotaMet = false;
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
-            gameScore = savedGameScore;
+            gameScore = savedGameScore;            
             playerIsDead = false;
         }
 
@@ -68,10 +69,11 @@ public class GameManager : MonoBehaviour
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
             gameScore = savedGameScore;
-            Debug.Log("Saved gamescore is " + savedGameScore);
+            playerIsDead = false;
         }
 
     }
+
 
     private void OnEnable()
     {

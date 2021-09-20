@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
         UpdateScore();
     }
        
-    private void UpdateScore()
+    public void UpdateScore()
     {
        highScore.text = currentScore.ToString("0");
     }
