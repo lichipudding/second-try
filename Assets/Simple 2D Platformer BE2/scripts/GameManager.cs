@@ -42,10 +42,16 @@ public class GameManager : MonoBehaviour
 
         if (scoreQuotaMet == true)
         {
+            StartCoroutine(LoadLevelDelay()); // this gives time for congratulation tex
+            IEnumerator LoadLevelDelay()
+            {
+                yield return new WaitForSeconds(5);
+            
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
-            savedGameScore = gameScore;  // Saves gamescore when loading next level
+            }
             Debug.Log("saving gamescore, saved score is" + savedGameScore);
+            savedGameScore = gameScore;  // Saves gamescore when loading next level
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha1))

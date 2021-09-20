@@ -7,6 +7,13 @@ public class Shooting : MonoBehaviour
     public Transform shootPoint;
     public GameObject bulletPrefab;
 
+    public GameObject grenadePrefab;
+    public Transform grenadeShootPoint;
+    public float grenadeForce = 11f;
+    public float grenadeRate;
+
+
+
     public float bulletForce = 11f;
 
     public float FireRate;
@@ -24,6 +31,13 @@ public class Shooting : MonoBehaviour
             FireNotRate = FireRate; 
         }
 
+        else if (Input.GetButton("Fire2") && FireNotRate <= 0)
+
+        {
+            ShootGrenade();
+            FireNotRate = grenadeRate;
+        }
+
         else if (FireNotRate >0)
         {
             FireNotRate -= Time.deltaTime;
@@ -36,4 +50,17 @@ public class Shooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
     }
+
+    void ShootGrenade()
+    {
+        GameObject bullet = Instantiate(grenadePrefab, grenadeShootPoint.position, grenadeShootPoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(grenadeShootPoint.right * grenadeForce, ForceMode2D.Impulse);
+    }
+
+    void ShootWolley()
+    {
+
+    }
+
 }

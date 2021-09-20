@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 6944754313827880198}
   - component: {fileID: 6178391829395576701}
   m_Layer: 0
-  m_Name: EnemyWasp
-  m_TagString: Enemy
+  m_Name: EnemyBird
+  m_TagString: EnemyBird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce60c581a6189504d991edea4e6e6c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTargetTag: HomeHitbox
+  enemyTargetTag: PlayerCharacter
   moveSpeed: 2
 --- !u!198 &6944754313827880198
 ParticleSystem:
@@ -4911,9 +4911,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4582260479766507728}
   - component: {fileID: 4582260479766507731}
-  - component: {fileID: 5519513348247072011}
+  - component: {fileID: 6938733470930418974}
   m_Layer: 0
-  m_Name: EnemySprite
+  m_Name: EnemyBirdSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4973,7 +4973,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -3100587905405979391, guid: d405c691242cf2943bf75c2da6de2b84, type: 3}
+  m_Sprite: {fileID: -3551287784963028691, guid: 3ccdbe69513f1c049b33e3b31e2971ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4984,7 +4984,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5519513348247072011
+--- !u!95 &6938733470930418974
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -4994,7 +4994,7 @@ Animator:
   m_GameObject: {fileID: 4582260479766507730}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ffd28f8b9b7dc94dbe04bf461f56925, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0d49096f1b365214a81ebe15f8d890f4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

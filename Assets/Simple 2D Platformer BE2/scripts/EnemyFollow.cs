@@ -8,6 +8,7 @@ public class EnemyFollow : MonoBehaviour
     private IEnumerator enemy;
     private bool isPlayerDead;
     private Transform target;
+    public string enemyTargetTag; // Must be "HomeHitbox" or "PlayerCharacter"
     private Rigidbody2D rb;
     private Vector2 movement;
     public float moveSpeed = 1f;
@@ -15,7 +16,7 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("HomeHitbox").transform;
+        target = GameObject.FindGameObjectWithTag(enemyTargetTag).transform;
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         isPlayerDead = gameManager.GetComponent<GameManager>().playerIsDead;
     }

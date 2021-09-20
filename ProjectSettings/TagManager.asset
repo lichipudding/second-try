@@ -12,6 +12,7 @@ TagManager:
   - GameManager
   - ScoreController
   - HomeHitbox
+  - EnemyBird
   layers:
   - Default
   - TransparentFX
