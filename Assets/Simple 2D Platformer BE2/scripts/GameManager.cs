@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     bool scoreQuotaMet = false;
     [HideInInspector]
     public bool playerIsDead = false;
+    private bool coroutineReady = true;
     public int scoreQuota;
   
     void Start()
@@ -29,32 +30,42 @@ public class GameManager : MonoBehaviour
         Debug.Log("Scene was loaded");
     }
 
-    void Update()
+    public void LoadNextLevelCheck()
     {
-       
-
+        Debug.Log("Checking if score is enough");
         if (gameScore >= scoreQuota)
         {
             scoreQuotaMet = true;
         }
 
-        //  else { scoreQuotaMet = false; }
-
         if (scoreQuotaMet == true)
         {
-            StartCoroutine(LoadLevelDelay()); // this gives time for congratulation tex
-            IEnumerator LoadLevelDelay()
+            if (coroutineReady == true) // keeps the routine from running several times while waitforseconds
+
             {
-                yield return new WaitForSeconds(5);
-            
-            levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-            levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
+                coroutineReady = false;
+
+                StartCoroutine(LoadLevelDelay()); // this gives time for congratulation tex
+                IEnumerator LoadLevelDelay()
+                {
+                    Debug.Log("Starting LoadLevelDelay()");
+                    yield return new WaitForSeconds(5);
+                    levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+                    levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
+                    coroutineReady = true;
+                    scoreQuotaMet = false;
+                }
             }
-            Debug.Log("saving gamescore, saved score is" + savedGameScore);
+
+            Debug.Log("saving gamescore, saved score is " + savedGameScore);
             savedGameScore = gameScore;  // Saves gamescore when loading next level
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha1))
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
             levelLoader.GetComponent<LevelLoader>().LoadNextLevel();

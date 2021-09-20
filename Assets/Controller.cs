@@ -24,6 +24,7 @@ public class Controller : MonoBehaviour
    public void AddScore(int amount)
     {
         Debug.Log("adding score");
+        gameManager.GetComponent<GameManager>().LoadNextLevelCheck();
         currentScore = gameManager.GetComponent<GameManager>().gameScore;
         currentScore += amount;
         UpdateScore();
