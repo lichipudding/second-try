@@ -1,0 +1,672 @@
+fileFormatVersion: 2
+guid: b79f93406107ba84293636853d6ee87f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4502092943455631669
+    second: Surfing Frog_0
+  - first:
+      213: -460330070326030019
+    second: Surfing Frog_1
+  - first:
+      213: 602817079472876604
+    second: Surfing Frog_2
+  - first:
+      213: -1026378006187813583
+    second: Surfing Frog_3
+  - first:
+      213: -5065301796568413624
+    second: Surfing Frog_4
+  - first:
+      213: 7601088302700190847
+    second: Surfing Frog_5
+  - first:
+      213: -7651364793984761978
+    second: Surfing Frog_6
+  - first:
+      213: 7597189821474271570
+    second: Surfing Frog_7
+  - first:
+      213: 3778860618863029319
+    second: Surfing Frog_8
+  - first:
+      213: -6305805453464670292
+    second: Surfing Frog_9
+  - first:
+      213: -8652082193647996283
+    second: Surfing Frog_10
+  - first:
+      213: 5291855564272694826
+    second: Surfing Frog_11
+  - first:
+      213: 5426729731269478323
+    second: Surfing Frog_12
+  - first:
+      213: -4903761557154971784
+    second: Surfing Frog_13
+  - first:
+      213: -4255725850060935041
+    second: Surfing Frog_14
+  - first:
+      213: -87443994055511462
+    second: Surfing Frog_15
+  - first:
+      213: -8990457919856946600
+    second: Surfing Frog_16
+  - first:
+      213: -585105549055639436
+    second: Surfing Frog_17
+  - first:
+      213: 6289236888946450328
+    second: Surfing Frog_18
+  - first:
+      213: -3074644351784946009
+    second: Surfing Frog_19
+  - first:
+      213: 8256266101611476359
+    second: Surfing Frog_20
+  - first:
+      213: -2178130777183506415
+    second: Surfing Frog_21
+  - first:
+      213: 6920640339326193484
+    second: Surfing Frog_22
+  - first:
+      213: 652080785960200760
+    second: Surfing Frog_23
+  - first:
+      213: 3536257428929426166
+    second: Surfing Frog_24
+  - first:
+      213: -1349400799249250792
+    second: Surfing Frog_25
+  - first:
+      213: 4528016999888963909
+    second: Surfing Frog_26
+  - first:
+      213: 7048054125104040871
+    second: Surfing Frog_27
+  - first:
+      213: -6929900603664047714
+    second: Surfing Frog_28
+  - first:
+      213: -7030055830947247044
+    second: Surfing Frog_29
+  - first:
+      213: 7684979041568871797
+    second: Surfing Frog_30
+  - first:
+      213: -4520748825552498913
+    second: Surfing Frog_31
+  - first:
+      213: 4529044310893215232
+    second: Surfing Frog_32
+  - first:
+      213: 8705248069900477835
+    second: Surfing Frog_33
+  - first:
+      213: 4846879424261012887
+    second: Surfing Frog_34
+  - first:
+      213: -2949748287379342940
+    second: Surfing Frog_35
+  - first:
+      213: -1735690359266852907
+    second: Surfing Frog_36
+  - first:
+      213: -970762099140569131
+    second: Surfing Frog_37
+  - first:
+      213: 6634652342829423058
+    second: Surfing Frog_38
+  - first:
+      213: 6398903740602836987
+    second: Surfing Frog_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Surfing Frog_0
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1400
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6c88f225a5581c0800000000000000
+      internalID: -4502092943455631669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1400
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3159ce6d349c99f0800000000000000
+      internalID: -460330070326030019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1400
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ce48e90f2ad5800800000000000000
+      internalID: 602817079472876604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_3
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1400
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135d6ef24a291c1f0800000000000000
+      internalID: -1026378006187813583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1400
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a44676ade64b9b0800000000000000
+      internalID: -5065301796568413624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1000
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c52dcf98d7c7960800000000000000
+      internalID: 7601088302700190847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1000
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fbb9f2244e0d590800000000000000
+      internalID: -7651364793984761978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_7
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1000
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251ff2814e3ae6960800000000000000
+      internalID: 7597189821474271570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_8
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1000
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c2b0b26b5317430800000000000000
+      internalID: 3778860618863029319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_9
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1000
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf648389574d78a0800000000000000
+      internalID: -6305805453464670292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 600
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582f028e511ade780800000000000000
+      internalID: -8652082193647996283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 600
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26f5272992707940800000000000000
+      internalID: 5291855564272694826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 600
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b74e5440fd9f4b40800000000000000
+      internalID: 5426729731269478323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_13
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 600
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fbf8258d652fbb0800000000000000
+      internalID: -4903761557154971784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_14
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 600
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70bbad13ef90f4c0800000000000000
+      internalID: -4255725850060935041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 200
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a527494962659cef0800000000000000
+      internalID: -87443994055511462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 200
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85254d6c72a7b3380800000000000000
+      internalID: -8990457919856946600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_17
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 200
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470cd686a9941e7f0800000000000000
+      internalID: -585105549055639436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_18
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 200
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f9fe1f0abd74750800000000000000
+      internalID: 6289236888946450328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surfing Frog_19
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 200
+        width: 160
+        height: 100
+      alignment: 9
+      pivot: {x: 0.33, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a67231904ba455d0800000000000000
+      internalID: -3074644351784946009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,14 +16,16 @@ public class Controller : MonoBehaviour
     {
         highScore = highScore.GetComponent<TextMeshProUGUI>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        
-        currentScore = 0;
+
+        currentScore = gameManager.GetComponent<GameManager>().gameScore;
         UpdateScore();
     }
 
    public void AddScore(int amount)
     {
         Debug.Log("adding score");
+
+
         gameManager.GetComponent<GameManager>().LoadNextLevelCheck();
         currentScore = gameManager.GetComponent<GameManager>().gameScore;
         currentScore += amount;

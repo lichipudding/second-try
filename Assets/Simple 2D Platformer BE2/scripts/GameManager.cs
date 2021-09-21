@@ -6,15 +6,20 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameObject levelLoader;
+    private GameObject WinEnabler;
+    private GameObject LoseEnabler;
+
+
 
     [HideInInspector]
     private GameObject ScoreController;
     public int gameScore;
     private int savedGameScore;
-    bool scoreQuotaMet = false;
+    [HideInInspector]
+    public bool scoreQuotaMet = false;
     [HideInInspector]
     public bool playerIsDead = false;
-    private bool coroutineReady = true;
+    private bool coroutineIsRunning = false;
     public int scoreQuota;
   
     void Start()
@@ -28,6 +33,7 @@ public class GameManager : MonoBehaviour
         levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
         scoreQuota = levelLoader.GetComponent<LevelLoader>().levelQuota;
         Debug.Log("Scene was loaded");
+        StopAllCoroutines(); // keeps subsequent kills during secene load to load the scene again
     }
 
     public void LoadNextLevelCheck()
@@ -38,23 +44,22 @@ public class GameManager : MonoBehaviour
             scoreQuotaMet = true;
         }
 
-        if (scoreQuotaMet == true)
+        else
         {
-            if (coroutineReady == true) // keeps the routine from running several times while waitforseconds
+            scoreQuotaMet = false;
+        }
+
+        if (scoreQuotaMet)
+        {
+            if (coroutineIsRunning == false) // keeps the routine from running several times while waitforseconds
 
             {
-                coroutineReady = false;
+                //coroutineReady = false;
+                scoreQuotaMet = false;
 
-                StartCoroutine(LoadLevelDelay()); // this gives time for congratulation tex
-                IEnumerator LoadLevelDelay()
-                {
-                    Debug.Log("Starting LoadLevelDelay()");
-                    yield return new WaitForSeconds(5);
-                    levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-                    levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
-                    coroutineReady = true;
-                    scoreQuotaMet = false;
-                }
+                StartCoroutine(LoadNextLevelDelay()); // this gives time for congratulation tex
+                WinEnabler = GameObject.FindGameObjectWithTag("WinMesseage");
+                WinEnabler.GetComponent<Enabler>().EnableThis();
             }
 
             Debug.Log("saving gamescore, saved score is " + savedGameScore);
@@ -62,6 +67,29 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    IEnumerator LoadNextLevelDelay()
+    {
+        coroutineIsRunning = true;
+        Debug.Log("Starting LoadNextLevelDelay()");
+        yield return new WaitForSeconds(5);
+        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+        levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
+        // coroutineReady = true;
+        coroutineIsRunning = false;
+    }
+
+    IEnumerator LoadCurrentLevelDelay()
+    {
+        coroutineIsRunning = true;
+        Debug.Log("Starting LoadCurrentLevelDelay()");
+        yield return new WaitForSeconds(5);
+        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
+        levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
+        // coroutineReady = true;
+        coroutineIsRunning = false;
+    }
+
 
     void Update()
     {
@@ -75,22 +103,21 @@ public class GameManager : MonoBehaviour
 
         if (playerIsDead == true)
         {
-            levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-            levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
+            StartCoroutine(LoadCurrentLevelDelay());
+            LoseEnabler = GameObject.FindGameObjectWithTag("LoseMesseage");
+            LoseEnabler.GetComponent<Enabler>().EnableThis();
             gameScore = savedGameScore;            
             playerIsDead = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
-            levelLoader.GetComponent<LevelLoader>().LoadCurrentLevel();
+            StartCoroutine(LoadCurrentLevelDelay());
             gameScore = savedGameScore;
             playerIsDead = false;
         }
 
     }
-
 
     private void OnEnable()
     {
