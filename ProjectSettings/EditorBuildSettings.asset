@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Aydans.unity
-    guid: d14f7c6f94920ca438f3fa8f91810bb8
+    path: Assets/Scenes/StartMenu.unity
+    guid: ae28d488da01c1141a8e00ff63e08d68
   - enabled: 1
     path: Assets/Scenes/ErikStart.unity
     guid: 5bcbff638280af34094bc3ff5eb49dc2
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ErikEnd.unity
     guid: 9eb02e88a7fc809468e198b07c47d461
+  - enabled: 1
+    path: Assets/Scenes/Aydans.unity
+    guid: d14f7c6f94920ca438f3fa8f91810bb8
   m_configObjects: {}
