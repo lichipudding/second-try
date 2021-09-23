@@ -22,7 +22,7 @@ public class PlayerDeath : MonoBehaviour
     void ChangeHealth(int health)
     {
         playerHealth += health; 
-        if (playerHealth <=0)
+        if (playerHealth ==0)
         {
             StartCoroutine(DieSlow()); // Coroutine used to delay DieSlow()
         }
@@ -39,6 +39,8 @@ public class PlayerDeath : MonoBehaviour
         if (other.gameObject.CompareTag(killerTag)) // Kill the player if enemy touches object with this script
         {
             DamagePlayer(1);
+            Destroy(other.gameObject);
+            GameObject.Find("GameManager").GetComponent<LifeCount>().LoseLife();
         }
     }
 

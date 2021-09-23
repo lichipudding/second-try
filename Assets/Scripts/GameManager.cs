@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneWasChanged (Scene scene, LoadSceneMode mode) // runs when every scene loads
     {
         scoreQuotaMet = false;
+        GetComponent<LifeCount>().livesRemaining = 3;
         levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
         scoreQuota = levelLoader.GetComponent<LevelLoader>().levelQuota;
         Debug.Log("Scene was loaded");

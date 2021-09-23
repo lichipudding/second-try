@@ -15,6 +15,7 @@ TagManager:
   - EnemyBird
   - WinMesseage
   - LoseMesseage
+  - FindMyLives
   layers:
   - Default
   - TransparentFX

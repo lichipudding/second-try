@@ -13,6 +13,9 @@ public class EnemySpawnerScript : MonoBehaviour
     float randY;
     Vector2 whereToSpawn;
 
+    float randSizeMax;
+    float randSizeMin;
+
     public float xRangeMax;
     public float xRangeMin;
 
@@ -40,8 +43,15 @@ public class EnemySpawnerScript : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range(-xRangeMin, xRangeMax);
             randY = Random.Range(-yRangeMin, yRangeMax);
+
+            
+
+
             whereToSpawn = new Vector2(randX + transform.position.x, randY + transform.position.y);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
         }
+
+        
+
     }
 }
