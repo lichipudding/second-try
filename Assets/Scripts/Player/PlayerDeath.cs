@@ -6,7 +6,9 @@ public class PlayerDeath : MonoBehaviour
 {
     private GameObject gameManager;
     public string killerTag = "Enemy";
-    public int playerHealth = 3; 
+    public int playerHealth = 3;
+    public Transform playerPosition;
+    public Vector2 checkPointPosition;
 
 
     void Start()
@@ -39,6 +41,7 @@ public class PlayerDeath : MonoBehaviour
         if (other.gameObject.CompareTag(killerTag)) // Kill the player if enemy touches object with this script
         {
             DamagePlayer(1);
+            gameObject.transform.position = checkPointPosition;
             Destroy(other.gameObject);
             GameObject.Find("GameManager").GetComponent<LifeCount>().LoseLife();
         }
