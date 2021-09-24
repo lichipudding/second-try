@@ -6137,6 +6137,21 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 62472f746318fc74792ff462840b6479, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: LoseLife
+    clip: {fileID: 8300000, guid: 9d46f9fb81576714f895afcfd4a549ad, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: LevelClear
+    clip: {fileID: 8300000, guid: b96abbd9b34bcaa4fa2a7b143dc9a4eb, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &1486739255
 Transform:
   m_ObjectHideFlags: 0
@@ -9740,7 +9755,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1389942158455639323, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: levelQuota
-      value: 1000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1459951456707066660, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: m_Name

@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
 
                 StartCoroutine(LoadNextLevelDelay()); // this gives time for congratulation tex
                 WinEnabler = GameObject.FindGameObjectWithTag("WinMesseage");
+                FindObjectOfType<AudioManager>().Play("LevelClear");
                 WinEnabler.GetComponent<Enabler>().EnableThis();
             }
 
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(LoadCurrentLevelDelay());
             LoseEnabler = GameObject.FindGameObjectWithTag("LoseMesseage");
             LoseEnabler.GetComponent<Enabler>().EnableThis();
+            FindObjectOfType<AudioManager>().Play("GameOver");
             gameScore = savedGameScore;            
             playerIsDead = false;
         }

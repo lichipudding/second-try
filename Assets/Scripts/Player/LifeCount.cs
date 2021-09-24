@@ -19,6 +19,7 @@ public class LifeCount : MonoBehaviour
 
     public void LoseLife()
     {
+        FindObjectOfType<AudioManager>().Play("LoseLife");
         if (livesRemaining == 0)
             return;
 

@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8981317387724591164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8981317387724591154}
+  - component: {fileID: 8981317387724591165}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8981317387724591154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981317387724591164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8981317387724591165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981317387724591164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7550f3ea26608e9449661e2c7373ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: SimpleFire
+    clip: {fileID: 8300000, guid: 90279d0984318964ab0f4463066d8959, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GrenadeFire
+    clip: {fileID: 8300000, guid: 5454d703ee2f7264496688803b033860, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: f1a7f97d69814ab4cb822f5e41eae513, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: 9fd6616f869683d4d8b008b358dd68d7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ScoreUp
+    clip: {fileID: 8300000, guid: cf5c0ed937a151744812ba8427c7982b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 62472f746318fc74792ff462840b6479, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: LoseLife
+    clip: {fileID: 8300000, guid: 9d46f9fb81576714f895afcfd4a549ad, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: LevelClear
+    clip: {fileID: 8300000, guid: b96abbd9b34bcaa4fa2a7b143dc9a4eb, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
