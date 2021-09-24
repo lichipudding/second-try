@@ -8,12 +8,12 @@ public class PlayerDeath : MonoBehaviour
     public string killerTag = "Enemy";
     public int playerHealth = 3;
     public Transform playerPosition;
-    public Vector2 checkPointPosition;
+    public Vector3 checkPointPosition;
 
 
     void Start()
     {
-        
+        checkPointPosition = gameObject.transform.position;
     }
 
     void Update()

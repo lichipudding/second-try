@@ -98,7 +98,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   rb: {fileID: 0}
-  bulletRicochet: 0.1
+  bulletRicochet: 1
 --- !u!58 &-271548471772392708
 CircleCollider2D:
   m_ObjectHideFlags: 0

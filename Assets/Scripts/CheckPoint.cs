@@ -10,8 +10,8 @@ public class CheckPoint : MonoBehaviour
         if (other.CompareTag("PlayerCharacter"))
         {
             Debug.Log("collision");
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerCharacter").GetComponent<PlayerDeath>().checkPointPosition;
-
+            GameObject.FindGameObjectWithTag("PlayerCharacter").GetComponent<PlayerDeath>().checkPointPosition = gameObject.transform.position;
+            Destroy(gameObject);
         }
     }
 }
