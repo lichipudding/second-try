@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("EnemyHit");
+
         health -= damage;
 
            if (health <= 0)
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f); // waits on this line for 0.2 sec
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().Play("ScoreUp");
         ScoreController.AddScore(scoreAdd); 
         gameManager = GameObject.FindGameObjectWithTag("GameManager"); 
         gameManager.GetComponent<GameManager>().gameScore += scoreAdd; // adds score

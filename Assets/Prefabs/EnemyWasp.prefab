@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5069521282929096074}
   - component: {fileID: 6944754313827880198}
   - component: {fileID: 6178391829395576701}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyWasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4912,7 +4912,7 @@ GameObject:
   - component: {fileID: 4582260479766507728}
   - component: {fileID: 4582260479766507731}
   - component: {fileID: 5519513348247072011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

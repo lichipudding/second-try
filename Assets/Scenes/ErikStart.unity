@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529451337
 GameObject:
@@ -2786,7 +2786,7 @@ Transform:
   - {fileID: 3868979140099934475}
   - {fileID: 67573883}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706820436
 GameObject:
@@ -3771,7 +3771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932412939
 GameObject:
@@ -4987,8 +4987,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OH NO :(
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
-  m_sharedMaterial: {fileID: -1067251217871580646, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
+  m_sharedMaterial: {fileID: 2491156852439077551, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5018,7 +5018,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5916,7 +5916,7 @@ Transform:
   m_Children:
   - {fileID: 833166432}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455574532
 GameObject:
@@ -6082,6 +6082,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1486739253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486739255}
+  - component: {fileID: 1486739254}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1486739254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486739253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7550f3ea26608e9449661e2c7373ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: SimpleFire
+    clip: {fileID: 8300000, guid: 90279d0984318964ab0f4463066d8959, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GrenadeFire
+    clip: {fileID: 8300000, guid: 5454d703ee2f7264496688803b033860, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: f1a7f97d69814ab4cb822f5e41eae513, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: 9fd6616f869683d4d8b008b358dd68d7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ScoreUp
+    clip: {fileID: 8300000, guid: cf5c0ed937a151744812ba8427c7982b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1486739255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486739253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495593040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6101,7 +6170,7 @@ GameObject:
   - component: {fileID: 1495593041}
   - component: {fileID: 1495593050}
   - component: {fileID: 1495593052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MC
   m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
@@ -6304,7 +6373,7 @@ Transform:
   - {fileID: 2036185}
   - {fileID: 1725273936}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1495593050
 MonoBehaviour:
@@ -7717,7 +7786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1725273936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GrenadeShootPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7779,8 +7848,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Highscoore maaan
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
-  m_sharedMaterial: {fileID: -1067251217871580646, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
+  m_sharedMaterial: {fileID: 2491156852439077551, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7804,13 +7873,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -7882,8 +7951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 134.06471, y: -157.42181}
-  m_SizeDelta: {x: -268.1293, y: -314.8439}
+  m_AnchoredPosition: {x: 134.0647, y: -158.44662}
+  m_SizeDelta: {x: -268.1293, y: -316.8935}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1773600885
 GameObject:
@@ -8529,7 +8598,7 @@ Transform:
   m_Children:
   - {fileID: 901475099}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1853101804
 SpriteRenderer:
@@ -8781,7 +8850,7 @@ RectTransform:
   - {fileID: 1082957942}
   - {fileID: 878326689}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9004,8 +9073,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEVEL CLEAR !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
-  m_sharedMaterial: {fileID: -1067251217871580646, guid: 3d45793e38c05344fa317167f4fea886, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
+  m_sharedMaterial: {fileID: 2491156852439077551, guid: 6c135a437935457448d6d2ab73410a88, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9035,7 +9104,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -9513,6 +9582,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1133197047884434443, guid: 243473f75e82f9d40879a692cba8d4a6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413158011272685581, guid: 243473f75e82f9d40879a692cba8d4a6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3413158011272685581, guid: 243473f75e82f9d40879a692cba8d4a6, type: 3}
       propertyPath: m_TagString
       value: HomeHitbox
@@ -9679,7 +9756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708056554930100678, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1708056554930100678, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: m_LocalPosition.x

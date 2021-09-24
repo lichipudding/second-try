@@ -11,6 +11,7 @@ public class CheckPoint : MonoBehaviour
         {
             Debug.Log("collision");
             GameObject.FindGameObjectWithTag("PlayerCharacter").GetComponent<PlayerDeath>().checkPointPosition = gameObject.transform.position;
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
             Destroy(gameObject);
         }
     }
