@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         scoreQuota = levelLoader.GetComponent<LevelLoader>().levelQuota;
         Debug.Log("Scene was loaded");
         StopAllCoroutines(); // keeps subsequent kills during secene load to load the scene again
+        coroutineIsRunning = false;
     }
 
     public void LoadNextLevelCheck()
