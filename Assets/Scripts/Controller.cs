@@ -19,6 +19,8 @@ public class Controller : MonoBehaviour
 
         currentScore = gameManager.GetComponent<GameManager>().gameScore;
         UpdateScore();
+
+        
     }
 
    public void AddScore(int amount)

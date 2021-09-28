@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -271548471772392708}
   - component: {fileID: 8387074548737047402}
   m_Layer: 6
-  m_Name: BulletGunk
+  m_Name: BulletGunk 1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: adcc1ca566f830840bbfbdb9c4d38499, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92f00cce0d0191f4295f90ee136d700b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
