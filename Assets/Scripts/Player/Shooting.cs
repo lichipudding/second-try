@@ -13,8 +13,8 @@ public class Shooting : MonoBehaviour
     public float grenadeRate;
 
     private float angle;
-    public float volleyStart = 0.5f;
-    public float volleyWait = 0.5f;
+    public float volleyRate = 0.5f;
+    
   
 
 
@@ -24,11 +24,12 @@ public class Shooting : MonoBehaviour
     public float FireRate;
     private float FireNotRate;
 
+    private float GrenadeFireNotRate;
+    private float VolleyFireNotRate;
+
     private void Start()
     {
-        //FireNotRate = FireRate;
-        
-        //InvokeRepeating("ShootVolley", volleyStart, volleyWait);
+      
         
     }
     void Update()
@@ -39,11 +40,11 @@ public class Shooting : MonoBehaviour
             FireNotRate = FireRate; 
         }
 
-        else if (Input.GetButton("Fire2") && FireNotRate <= 0)
+        else if (Input.GetButton("Fire2") && GrenadeFireNotRate <= 0)
 
         {
             ShootGrenade();
-            FireNotRate = grenadeRate;
+            GrenadeFireNotRate = grenadeRate;
         }
 
         else if (FireNotRate >0)
@@ -51,13 +52,22 @@ public class Shooting : MonoBehaviour
             FireNotRate -= Time.deltaTime;
         }
 
-        else if (Input.GetKey("q") && FireNotRate <= 0)
+        else if (Input.GetKey("q") && VolleyFireNotRate <= 0)
 
         {
             ShootVolley();
-            FireNotRate = volleyStart;
+            VolleyFireNotRate = volleyRate;
         }
 
+        else if (GrenadeFireNotRate > 0)
+        {
+            GrenadeFireNotRate -= Time.deltaTime;
+        }
+
+        else if (VolleyFireNotRate > 0)
+        {
+            VolleyFireNotRate -= Time.deltaTime;
+        }
     }
 
     void Shoot()
@@ -80,7 +90,7 @@ public class Shooting : MonoBehaviour
         for (int z = 0; z < 4; z++)
         {
             var volleyRotation = gameObject.transform.rotation;
-            volleyRotation *= Quaternion.Euler(0, 9, angle);
+            volleyRotation *= Quaternion.Euler(0, 0, angle);
 
             GameObject bullet = Instantiate(bulletPrefab, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), volleyRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
