@@ -5702,30 +5702,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1312259506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7662647125943364793, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
-  m_PrefabInstance: {fileID: 1599050046}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1312259508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312259506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1baa3bbd1889b07439ba9e1c1eae0086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 4582260479212125690, guid: a43ec78282b10354c80ed59a0e91b0ff, type: 3}
-  enemyTargetTag: HomeHitbox
-  xRangeMax: 0
-  xRangeMin: 0
-  yRangeMax: 0
-  yRangeMin: 0
-  spawnRate: 9
 --- !u!1 &1315846234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,18 +7002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1977036088}
     m_Modifications:
-    - target: {fileID: 7662647125943364775, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
-      propertyPath: spawnRate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662647125943364775, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
-      propertyPath: yRangeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662647125943364775, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
-      propertyPath: yRangeMin
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7662647125943364792, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7086,8 +7050,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnerFish
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1915659943569884681, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a252633b0c2b52844ac9395324c9493d, type: 3}
 --- !u!1001 &1602002148
 PrefabInstance:
