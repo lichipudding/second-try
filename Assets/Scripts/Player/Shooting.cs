@@ -12,6 +12,11 @@ public class Shooting : MonoBehaviour
     public float grenadeForce = 11f;
     public float grenadeRate;
 
+    private float angle;
+    public float volleyStart = 0.5f;
+    public float volleyWait = 0.5f;
+  
+
 
 
     public float bulletForce = 11f;
@@ -21,7 +26,10 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        FireNotRate = FireRate;
+        //FireNotRate = FireRate;
+        
+        //InvokeRepeating("ShootVolley", volleyStart, volleyWait);
+        
     }
     void Update()
     {
@@ -42,13 +50,21 @@ public class Shooting : MonoBehaviour
         {
             FireNotRate -= Time.deltaTime;
         }
+
+        else if (Input.GetKey("q") && FireNotRate <= 0)
+
+        {
+            ShootVolley();
+            FireNotRate = volleyStart;
+        }
+
     }
 
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
+       
     }
 
     void ShootGrenade()
@@ -58,9 +74,19 @@ public class Shooting : MonoBehaviour
         rb.AddForce(grenadeShootPoint.right * grenadeForce, ForceMode2D.Impulse);
     }
 
-    void ShootWolley()
+    void ShootVolley()
     {
+        angle = 60f;
+        for (int z = 0; z < 4; z++)
+        {
+            var volleyRotation = gameObject.transform.rotation;
+            volleyRotation *= Quaternion.Euler(0, 9, angle);
 
+            GameObject bullet = Instantiate(bulletPrefab, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), volleyRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
+            angle = angle - 30f;
+        }
     }
 
 }
