@@ -87,14 +87,15 @@ public class Shooting : MonoBehaviour
     void ShootVolley()
     {
         angle = 30f;
-        for (int z = 0; z < 4; z++)
+        for (int z = 0; z < 5; z++)
         {
+
             var volleyRotation = gameObject.transform.rotation;
             volleyRotation *= Quaternion.Euler(0, 0, angle);
 
             GameObject bullet = Instantiate(bulletPrefab, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), volleyRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce(bullet.transform.right * bulletForce, ForceMode2D.Impulse);
             angle = angle - 20f;
         }
     }
