@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 256693433}
   - component: {fileID: 256693432}
   - component: {fileID: 256693431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1604872352}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &256693432
@@ -3226,6 +3226,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &648523339 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6773797830311665750, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
+  m_PrefabInstance: {fileID: 919142359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &656156050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4123,7 +4128,7 @@ GameObject:
   - component: {fileID: 810303850}
   - component: {fileID: 810303852}
   - component: {fileID: 810303851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,6 +4925,10 @@ PrefabInstance:
     - target: {fileID: 6773797830311665749, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773797830311665749, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6773797830311665750, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
       propertyPath: orthographic size
@@ -8452,7 +8461,7 @@ PrefabInstance:
     - target: {fileID: 6277186513380558686, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 648523339}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
 --- !u!4 &1819427788 stripped
