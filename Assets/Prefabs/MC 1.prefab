@@ -208,9 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 6277186514066613969}
   bulletPrefab: {fileID: 5275925196815396940, guid: 178bdc1bd7e21c241aa49c1f5bcbb902, type: 3}
-  grenadePrefab: {fileID: 5275925196815396940, guid: 1c9340aeec0ca824c9a70a9aed5e9d82, type: 3}
+  grenadePrefab: {fileID: 5275925196815396940, guid: 1090d12a1629b254187ba1d1067f7cf3, type: 3}
   grenadeShootPoint: {fileID: 6277186512343441496}
-  grenadeForce: 3000
+  grenadeForce: 500
   grenadeRate: 1.5
   bulletForce: 11
   FireRate: 0.2
