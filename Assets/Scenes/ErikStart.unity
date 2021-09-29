@@ -1893,7 +1893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6277186513380558683, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
       propertyPath: volleyRate
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6277186513380558683, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
       propertyPath: volleyStart

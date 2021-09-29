@@ -86,7 +86,7 @@ public class Shooting : MonoBehaviour
 
     void ShootVolley()
     {
-        angle = 60f;
+        angle = 30f;
         for (int z = 0; z < 4; z++)
         {
             var volleyRotation = gameObject.transform.rotation;
@@ -95,7 +95,7 @@ public class Shooting : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), volleyRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
-            angle = angle - 30f;
+            angle = angle - 20f;
         }
     }
 
