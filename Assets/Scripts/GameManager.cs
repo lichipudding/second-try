@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool playerIsDead = false;
     private bool coroutineIsRunning = false;
+    private bool gameIsPaused = false;
     public int scoreQuota;
   
     void Start()
@@ -96,6 +97,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        { if (gameIsPaused == false)
+            {
+                PauseGame();
+            }
+         else
+            {
+                ResumeGame();
+            }
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
@@ -122,6 +135,20 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        gameIsPaused = true;
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        gameIsPaused = false;
+    }
+
+
 
     private void OnEnable()
     {
