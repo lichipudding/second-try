@@ -64,7 +64,7 @@ public class Shooting : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-       
+        rb.AddForce(shootPoint.right * bulletForce, ForceMode2D.Impulse);
     }
 
     void ShootGrenade()
