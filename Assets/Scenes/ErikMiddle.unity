@@ -4669,7 +4669,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1389942158455639323, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: levelQuota
-      value: 10000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 1459951456707066660, guid: a1929c3636a95ac438a9b60c2715b6b2, type: 3}
       propertyPath: m_Name

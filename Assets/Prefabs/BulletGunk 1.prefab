@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   rb: {fileID: 0}
-  bulletRicochet: 1
+  bulletRicochet: 5
 --- !u!58 &-271548471772392708
 CircleCollider2D:
   m_ObjectHideFlags: 0
