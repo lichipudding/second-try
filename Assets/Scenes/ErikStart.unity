@@ -1891,6 +1891,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MC 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6277186513380558683, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
+      propertyPath: volleyRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277186513380558683, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
+      propertyPath: volleyStart
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277186513380558683, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
+      propertyPath: VolleyFireNotRate
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6277186513380558686, guid: a6ab3bee2a2f7574bac2678c1ca8113f, type: 3}
       propertyPath: cam
       value: 
@@ -9492,11 +9504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6773797830311665833, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0785503
+      value: -7.82838
       objectReference: {fileID: 0}
     - target: {fileID: 6773797830311665833, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5501782
+      value: 0.5605775
       objectReference: {fileID: 0}
     - target: {fileID: 6773797830311665833, guid: c70200460d94e3940bee6aa7b3624d5e, type: 3}
       propertyPath: m_LocalPosition.z
